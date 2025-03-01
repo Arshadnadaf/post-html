@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time Method</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 300px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <script>document.write(Date());</script>
+    </div>
+    <table border="1">
+        <tr><td>Date</td><td id="date"></td></tr> 
+        <tr><td>Month</td><td id="month"></td></tr> 
+        <tr><td>Year</td><td id="year"></td></tr> 
+        <tr><td>Complete Date</td><td id="cd"></td></tr>
+        <tr><td>hours</td><td id="hours"></td></tr>
+        <tr><td>Min</td><td id="min"></td></tr> 
+        <tr><td>sec</td><td id="sec"></td></tr> 
+        <tr><td>time</td><td id="time"></td></tr>   
+</table>
+<script>
+    d=new Date();
+    //month array
+    mm=["jan","Feb","Mar","Apr","May","jun","july","agu","Sep","Oct","Nov","Dec"];
+    document.getElementById("month").innerHTML=mm[d.getMonth()];
+    document.getElementById("date").innerHTML=d.getDate();
+    document.getElementById("year").innerHTML=d.getFullYear();
+     
+    cd=d.getDate()+"-"+mm[d.getMonth()]+"-"+d.getFullYear();
+    document.getElementById("cd").innerHTML=cd;
+    
+    document.getElementById("hours").innerHTML=d.getHours();
+    document.getElementById("min").innerHTML=d.getMinutes();
+    document.getElementById("sec").innerHTML=d.getSeconds();
+    cd=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+    document.getElementById("time").innerHTML=cd;
+</script>
+</body>
+</html>
